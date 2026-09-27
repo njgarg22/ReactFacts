@@ -1,14 +1,6 @@
 import { createRoot } from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 
-/** Challenge: 
- * Move the `main` element into its own component called "MainContent" 
- * and render that component inside the Page component.
- * 
- * Do the same with the `footer` element, moving it into a new
- * component called "Footer"
-*/
-
 function Header() {
     return (
             <header>
@@ -17,10 +9,16 @@ function Header() {
     )
 }
 
-function Page() {
+function Footer() {
     return (
-        <>
-            <Header />
+            <footer>
+                <small>© 2024 Ziroll development. All rights reserved.</small>
+            </footer>
+    )
+}
+
+function MainContent() {
+    return (
             <main>
                 <h1>Reason I am excited to learn React</h1>
                 <ol>
@@ -28,9 +26,15 @@ function Page() {
                     <li>I am more likely to get a job as a front end developer if I know React</li>
                 </ol>
             </main>
-            <footer>
-                <small>© 2024 Ziroll development. All rights reserved.</small>
-            </footer>
+    )
+}
+
+function Page() {
+    return (
+        <>
+            <Header />
+            <MainContent />
+            <Footer />
         </>
     )
 }
