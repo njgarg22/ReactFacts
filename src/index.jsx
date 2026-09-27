@@ -23,4 +23,4 @@ h1.textContent = "This is imperative coding"
 h1.className = "header"
 
 const rootDiv = document.getElementById("root")
-rootDiv.appendChild(element)
+rootDiv.appendChild(h1)
