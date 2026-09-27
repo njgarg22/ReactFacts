@@ -1,3 +1,4 @@
+/* Padding and border count toward width and height, so layout math stays predictable. */
 * {
     box-sizing: border-box;
 }
@@ -21,6 +22,9 @@ nav {
     height: 100%;
 }
 
+/* Direct-child selectors match the ReactFacts navbar, where the logo
+   and brand name sit inside <nav>. The practice Header keeps its logo
+   outside <nav>, so these rules do not apply to it. */
 nav > img {
     width: 40px;
     margin-right: 7px;
@@ -32,21 +36,9 @@ nav > span {
     font-weight: 700;
 }
 
-/* 
-Challenge: Place the gray react logo in the background
-
-Don't use an `img` element, but rather set it as the
-`background-image` of the `main` element.
-
-Hint: you'll need to use the following properties:
-- background-image: url(...)
-- background-repeat
-- background-position
-
-(Or the shorthand `background` property with values for all
-those other properties)
-*/
-
+/* Decorative half React logo. A background image stays out of the
+   document flow, so it doesn't push the facts list around.
+   `right` pins it to the right edge; `70%` drops it below center. */
 main {
     padding: 60px 30px;
     background-image: url(/src/assets/react-half.png);
@@ -69,6 +61,7 @@ main > h1 {
     line-height: 19px;
 }
 
+/* ::marker styles only the bullet, leaving the fact text white. */
 .facts-list > li::marker {
     color: #61DAFB;
     font-size: 1.5rem;

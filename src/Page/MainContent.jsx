@@ -1,3 +1,4 @@
+// Part of the unused Page exercise. App's Main component replaced this list.
 export default function MainContent() {
     return (
             <main>

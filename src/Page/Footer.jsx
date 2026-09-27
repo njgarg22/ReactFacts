@@ -1,3 +1,4 @@
+// Part of the unused Page exercise. Nothing in App renders a footer.
 export default function Footer() {
     return (
             <footer>

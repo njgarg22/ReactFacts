@@ -1,3 +1,5 @@
+// Static markup only. The half React logo behind this section is a
+// CSS background on `main` in index.css, not an image in this component.
 export default function Main() {
     return (
         <main>
