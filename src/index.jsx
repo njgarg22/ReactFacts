@@ -1,14 +1,13 @@
 import { createRoot } from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 
-/** Mini Challenge:
+/** Challenge: 
+ * Move the `main` element into its own component called "MainContent" 
+ * and render that component inside the Page component.
  * 
- * Move the `header` element from the Page component into 
- * its own component called "Header"
- * 
- * Then render an instance of the Header component inside
- * the Page component where the `header` used to be.
- */
+ * Do the same with the `footer` element, moving it into a new
+ * component called "Footer"
+*/
 
 function Header() {
     return (
