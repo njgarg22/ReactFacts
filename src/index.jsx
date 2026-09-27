@@ -1,13 +1,27 @@
 import { createRoot } from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 
+/** Mini Challenge:
+ * 
+ * Move the `header` element from the Page component into 
+ * its own component called "Header"
+ * 
+ * Then render an instance of the Header component inside
+ * the Page component where the `header` used to be.
+ */
+
+function Header() {
+    return (
+            <header>
+                <img src="src/assets/react.svg" width="40px" alt="React logo" />
+            </header>
+    )
+}
 
 function Page() {
     return (
         <>
-            <header>
-                <img src="src/assets/react.svg" width="40px" alt="React logo" />
-            </header>
+            <Header />
             <main>
                 <h1>Reason I am excited to learn React</h1>
                 <ol>
