@@ -1,16 +1,69 @@
-# React + Vite
+# ReactFacts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small static single-page site built with React and Vite. It shows a branded navbar and a list of fun facts about React, styled with a dark theme and a decorative half React logo in the background.
 
-Currently, two official plugins are available:
+This is my first React project, built while learning the fundamentals of components, JSX, and project structure.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![ReactFacts screenshot](docs/reactfacts-screenshot.png)
 
-## React Compiler
+## What it does
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Renders a `Navbar` with the React logo and the "ReactFacts" brand name
+- Renders a `Main` section with a heading and a bulleted list of React facts
+- Uses plain CSS (`src/index.css`) for layout, the Inter font, and the background logo
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [React 19](https://react.dev)
+- [Vite](https://vite.dev) with `@vitejs/plugin-react`
+- ESLint (`eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`)
+
+## Project structure
+
+```
+.
+├── index.html              # Vite entry HTML, loads Inter font
+├── public/                 # Static assets (favicon, icons)
+├── src/
+│   ├── index.jsx           # Mounts <App /> into #root
+│   ├── App.jsx             # Composes Navbar + Main
+│   ├── index.css           # Global styles
+│   ├── assets/             # Images (React logo, half logo background)
+│   ├── Components/
+│   │   ├── Navbar.jsx      # Header with logo and brand name
+│   │   └── Main.jsx        # "Fun facts about React" list
+│   └── Page/               # Earlier practice components (Header, MainContent, Footer, Page)
+└── Quiz/                   # Notes and answers from React learning quizzes
+```
+
+## Getting started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+Lint the code:
+
+```bash
+npm run lint
+```
