@@ -1,27 +1,11 @@
 import { createRoot } from "react-dom/client"
+// import { Header } from "./Header"    // Works but this is named export syntax
+// import Header from "./Header.jsx"    // Works but no need to mention .jsx
+// import WhateverComponent from "./Header" // You can do this as well. Use <WhateverComponent />
+import Header from "./Header"
 import "./index.css" // If the CSS file is in src/, load it via import
-const root = createRoot(document.getElementById("root"))
 
-/**
- * Challenge:
- * 
- * Move the `width` style off the JSX and into CSS with a dedicated
- * className on the img element, and change the width to 55px instead
- */
-function Header() {
-    return (
-            <header className="header">
-                <img src="src/assets/react.svg" className="nav-logo" alt="React logo" />
-                <nav>
-                    <ul className="nav-list">
-                        <li className="nav-list-item">Pricing</li>
-                        <li className="nav-list-item">About</li>
-                        <li className="nav-list-item">Contact</li>
-                    </ul>
-                </nav>
-            </header>
-    )
-}
+const root = createRoot(document.getElementById("root"))
 
 function Footer() {
     return (
