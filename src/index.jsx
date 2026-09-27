@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client"
+import "./index.css" // If the CSS file is in src/, load it via import
 const root = createRoot(document.getElementById("root"))
 
 // When we style in JSX, use className and not class
