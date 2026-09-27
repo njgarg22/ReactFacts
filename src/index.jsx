@@ -1,12 +1,9 @@
 import { createRoot } from "react-dom/client"
 const root = createRoot(document.getElementById("root"))
 
-// Fragment is a React feature that lets you group multiple sibling elements without adding an 
-// extra DOM node.
 
 function Page() {
     return (
-        // Instead of importing Fragment, you can use the shorthand <></>
         <>
             <header>
                 <img src="src/assets/react.svg" width="40px" alt="React logo" />
