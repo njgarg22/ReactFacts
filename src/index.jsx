@@ -2,18 +2,23 @@ import { createRoot } from "react-dom/client"
 import "./index.css" // If the CSS file is in src/, load it via import
 const root = createRoot(document.getElementById("root"))
 
-// When we style in JSX, use className and not class
-// const ul = document.createElement("ul") // Vanilla JS
-// ul.className = "nav-list"    // Vanilla JS
+/**
+ * Challenge:
+ * 
+ * Using flexbox, line up the `li`s horizontally and put them inline
+ * with the React logo.
+ * 
+ * NOTE: for practice's sake, don't select any elements, but use classes for all styling.
+ */
 function Header() {
     return (
-            <header>
+            <header className="header">
                 <img src="src/assets/react.svg" width="40px" alt="React logo" />
                 <nav>
                     <ul className="nav-list">
-                        <li>Pricing</li>
-                        <li>About</li>
-                        <li>Contact</li>
+                        <li className="nav-list-item">Pricing</li>
+                        <li className="nav-list-item">About</li>
+                        <li className="nav-list-item">Contact</li>
                     </ul>
                 </nav>
             </header>
